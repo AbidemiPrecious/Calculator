@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+ <link rel="stylesheet" href="style.css">
+ <title>Reg/Login Page</title>
+</head>
+<body>
+ <div class="container"> 
+    <div class="forms">
+      <div class="form-login log" id="form">
+       <span class="title">Login</span>
+      <form action="#" class="login-form" name="form" onsubmit="checkFunction()">   
+        <div class="input-field">
+         <input type="email" placeholder="Enter your email" id="email-name"  name="email" onblur="check()" required>
+           <i class="uil uil-envelope key"></i>
+        </div>
+        <div id="check_error"></div>
+        <!-- #GodisLove1 <div id="email_error">Please fill up your Email</div> -->
+
+        <div class="input-field">
+         <input type="password" name="password" class="password" placeholder="Enter your password" id="_password" onblur="check()" required>
+           <i class="uil uil-lock key"></i>
+           <i class="uil uil-eye-slash showHide"></i>
+        </div>
+        <div id="pw_check"></div>
+        
+        <div class="input-field button">
+         <input type="submit" id="_click" value="Login Now"  >
+      
+        </div>
+      </form>
+      <div class="login-signup">
+       <span class="text">Haven't Registered?
+       <a href="#" class="text signup-link">Register Now</a>
+       </span>
+      </div>
+       </div>
+
+
+       <!-- Registration Form -->
+    
+      <div class="form-login signup">
+       <span class="title">Registration</span>
+      <form action="#">
+        <div class="input-field">
+         <input type="text" onblur="validateit(this)" placeholder="Enter your name" id="name" required>
+           <i class="uil uil-user"></i>
+        </div>
+        <div id="name_error"></div>
+        
+        <div class="input-field">
+         <input type="email" onblur="validateit(this)" name="email" placeholder="Enter your email" id="regemail" required>
+           <i class="uil uil-envelope key"></i>
+        </div>
+        <div id="regemail_error"></div>
+        <div class="input-field">
+         <input type="password" onblur="validateit(this)" class="password" id="regpassword" placeholder="Create your password" required>
+           <i class="uil uil-lock key"></i>
+        </div>
+        <div id="regpassword_error"></div>
+        <div class="input-field">
+            <input type="password" onblur="validateit(this)" id="conpassword" class="password" placeholder="Confirm your password" required>
+           <i class="uil uil-lock key"></i>
+           <i class="uil uil-eye-slash showHide"></i>
+        </div>
+        <div id="conpassword_error"></div>
+        <div class="input-field button">
+         <input type="submit" onclick="Register()" value="Register Now">
+        </div>
+      </form>
+      <div class="login-signup">
+       <span class="text">Haven't Registered?
+       <a href="#" class="text login-link">Signup</a>
+       </span>
+      </div>
+       </div>
+      </div>
+ </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
